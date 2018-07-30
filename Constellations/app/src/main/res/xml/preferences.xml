@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="Appearance"
+        android:key="category_appearance">
+        <CheckBoxPreference
+            android:key="use_fixed_color"
+            android:title="Use custom color"
+            android:defaultValue="false"/>
+        <com.kizitonwose.colorpreference.ColorPreference
+            android:defaultValue="0xffffffff"
+            android:key="custom_color"
+            android:title="Custom color"
+            app:colorShape="square"
+            app:colorChoices="@array/color_choices"
+            android:dependency="use_fixed_color"
+            app:viewSize="normal"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+            android:title="Performance"
+            android:key="category_performance">
+        <ListPreference
+             android:key="res_divisor"
+             android:title="Resolution divisor"
+             android:summary="Lowering resolution results in better performance"
+             android:dialogTitle="Select resolution divisor"
+             android:entries="@array/divisors"
+             android:defaultValue="4"
+             android:entryValues="@array/divisorsAlias"/>
+    </PreferenceCategory>
+</PreferenceScreen>
