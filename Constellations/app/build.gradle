@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.shaderwallpaper.android"
-        minSdkVersion 26
-        targetSdkVersion 26
+        minSdkVersion 25
+        targetSdkVersion 25
     }
 
     signingConfigs {

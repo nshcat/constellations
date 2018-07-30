@@ -128,7 +128,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
     if(iUseCustomColor > 0)
     {
-        baseCol = iCustomColor.rgb;
+        baseCol = iCustomColor.rgb;1
     }
     else
     {
